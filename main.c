@@ -3,19 +3,19 @@
 
 #include "usb_lib.h"
 //#include "usb_desc.h"
-#include "hw_config.h"
+#include "ring_buffer.h"
 //#include "usb_pwr.h"
+#include "usb_hal.h"
 
 #include "usb_istr.h"
+#include "usb_interface.h"
 
 #include <stdint.h>
 #include <stdio.h>
 
 #include "inputReader.h"
 #include "motor_control.h"
-
-bool waitForCatch(uint32_t timeToWait, bool targetState);
-
+#include "device_state_machine.h"
 
 void USB_LP_CAN1_RX0_IRQHandler(void)
 {
@@ -24,7 +24,7 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 
 void leds(void *param)
 {
-	while(1)
+/*	while(1)
 	{
 		MotorControl_Start(motorDirection_backward);
 		vTaskDelay(50);
@@ -38,8 +38,7 @@ void leds(void *param)
 
 		if (waitForCatch(500, false) == true)	{
 
-/*			MotorControl_Stop();
-			vTaskDelay(500);*/
+
 
 			MotorControl_Start(motorDirection_forward);
 
@@ -50,9 +49,7 @@ void leds(void *param)
 				vTaskDelay(400);
 
 
-/*				MotorControl_Start(motorDirection_forward);
 
-				vTaskDelay(400);*/
 
 
 
@@ -61,57 +58,27 @@ void leds(void *param)
 		}
 
 		MotorControl_Stop();
-		//vTaskDelay(200);
-
-		//USB_Send_Data('A');
-	}
-}
-
-bool waitForCatch(uint32_t timeToWait, bool targetState)
-{
-	uint32_t time = 0;
-
-	while(time < timeToWait)	{
-		if (InputReader_GetCatchInputState() == targetState)	{		//false - пустая оптопара.
-			return true;
-		}
-		time++;
-		vTaskDelay(1);
-	}
-	return false;
-}
-
-void USB_IRQ (void *param)
-{
-	//usbSem = xSemaphoreCreateBinary();
-
-	//Set_System();
-	Set_USBClock();
-	USB_Interrupts_Config();
-	USB_Init();
-
-	while(1)
-	{
-		//xSemaphoreTake(usbSem, portMAX_DELAY);
-		USB_Istr();
-	}
+	}*/
 }
 
 int main(void)
 {
 	InputReader_Init();
 	MotorControl_Init();
+	DeviceStateMachine_Init();
+
+	UsbInterface_Init();
 	Set_USBClock();
 	USB_Interrupts_Config();
 	USB_Init();
 
-	xTaskCreate(
+/*	xTaskCreate(
 			leds,
 			"leds",
 			configMINIMAL_STACK_SIZE,
 			NULL,
 			tskIDLE_PRIORITY + 1,
-			NULL);
+			NULL);*/
 
 	vTaskStartScheduler();
 }
