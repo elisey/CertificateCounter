@@ -101,6 +101,7 @@
     <File name="STM32_USB-FS-Device_Driver/inc/usb_lib.h" path="STM32_USB-FS-Device_Driver/inc/usb_lib.h" type="1"/>
     <File name="USB/usb_prop.c" path="USB/usb_prop.c" type="1"/>
     <File name="FreeRTOS/src/event_groups.c" path="../libs/FreeRTOS/src/event_groups.c" type="1"/>
+    <File name="utils/ring_buffer_test.c" path="../libs/utils/ring_buffer_test.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_dbgmcu.c" path="stm_lib/src/stm32f10x_dbgmcu.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_fsmc.h" path="stm_lib/inc/stm32f10x_fsmc.h" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/src/otgd_fs_int.c" path="STM32_USB-FS-Device_Driver/src/otgd_fs_int.c" type="1"/>
@@ -113,15 +114,15 @@
     <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_dbgmcu.h" path="stm_lib/inc/stm32f10x_dbgmcu.h" type="1"/>
     <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
-    <File name="STM32_USB-FS-Device_Driver/src/otgd_fs_pcd.c" path="STM32_USB-FS-Device_Driver/src/otgd_fs_pcd.c" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/src" path="" type="2"/>
+    <File name="STM32_USB-FS-Device_Driver/src/otgd_fs_pcd.c" path="STM32_USB-FS-Device_Driver/src/otgd_fs_pcd.c" type="1"/>
     <File name="motor_control.h" path="motor_control.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_flash.h" path="stm_lib/inc/stm32f10x_flash.h" type="1"/>
-    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="FreeRTOS/src/heap_2.c" path="../libs/FreeRTOS/src/heap_2.c" type="1"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
-    <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>
     <File name="FreeRTOS/FreeRTOSConfig.h" path="FreeRTOSConfig.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_adc.c" path="stm_lib/src/stm32f10x_adc.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_iwdg.h" path="stm_lib/inc/stm32f10x_iwdg.h" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/src/usb_core.c" path="STM32_USB-FS-Device_Driver/src/usb_core.c" type="1"/>
@@ -135,29 +136,27 @@
     <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
     <File name="USB/usb_desc.h" path="USB/usb_desc.h" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/inc/usb_regs.h" path="STM32_USB-FS-Device_Driver/inc/usb_regs.h" type="1"/>
-    <File name="USB/hw_config.h" path="USB/hw_config.h" type="1"/>
-    <File name="FreeRTOS/include/mpu_wrappers.h" path="../libs/FreeRTOS/include/mpu_wrappers.h" type="1"/>
-    <File name="STM32_USB-FS-Device_Driver/inc" path="" type="2"/>
     <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
+    <File name="STM32_USB-FS-Device_Driver/inc" path="" type="2"/>
+    <File name="FreeRTOS/include/mpu_wrappers.h" path="../libs/FreeRTOS/include/mpu_wrappers.h" type="1"/>
     <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
     <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/src/usb_sil.c" path="STM32_USB-FS-Device_Driver/src/usb_sil.c" type="1"/>
+    <File name="FreeRTOS/include/StackMacros.h" path="../libs/FreeRTOS/include/StackMacros.h" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/inc/usb_def.h" path="STM32_USB-FS-Device_Driver/inc/usb_def.h" type="1"/>
-    <File name="FreeRTOS/include/StackMacros.h" path="../libs/FreeRTOS/include/StackMacros.h" type="1"/>
     <File name="FreeRTOS/include/queue.h" path="../libs/FreeRTOS/include/queue.h" type="1"/>
-    <File name="FreeRTOS/include/event_groups.h" path="../libs/FreeRTOS/include/event_groups.h" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/inc/usb_type.h" path="STM32_USB-FS-Device_Driver/inc/usb_type.h" type="1"/>
+    <File name="FreeRTOS/include/event_groups.h" path="../libs/FreeRTOS/include/event_groups.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
     <File name="USB/usb_istr.c" path="USB/usb_istr.c" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/src/usb_init.c" path="STM32_USB-FS-Device_Driver/src/usb_init.c" type="1"/>
     <File name="USB/usb_conf.h" path="USB/usb_conf.h" type="1"/>
-    <File name="FreeRTOS/include/croutine.h" path="../libs/FreeRTOS/include/croutine.h" type="1"/>
     <File name="FreeRTOS/include/port.c" path="../libs/FreeRTOS/include/port.c" type="1"/>
+    <File name="FreeRTOS/include/croutine.h" path="../libs/FreeRTOS/include/croutine.h" type="1"/>
     <File name="FreeRTOS/include/projdefs.h" path="../libs/FreeRTOS/include/projdefs.h" type="1"/>
-    <File name="USB/hw_config.c" path="USB/hw_config.c" type="1"/>
-    <File name="USB/usb_endp.c" path="USB/usb_endp.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_bkp.h" path="stm_lib/inc/stm32f10x_bkp.h" type="1"/>
+    <File name="USB/usb_endp.c" path="USB/usb_endp.c" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/inc/otgd_fs_cal.h" path="STM32_USB-FS-Device_Driver/inc/otgd_fs_cal.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_dma.c" path="stm_lib/src/stm32f10x_dma.c" type="1"/>
     <File name="stm_lib/src" path="" type="2"/>
@@ -173,13 +172,16 @@
     <File name="stm_lib/src/stm32f10x_rtc.c" path="stm_lib/src/stm32f10x_rtc.c" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_sdio.c" path="stm_lib/src/stm32f10x_sdio.c" type="1"/>
+    <File name="device_state_machine.h" path="device_state_machine.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/src/otgd_fs_cal.c" path="STM32_USB-FS-Device_Driver/src/otgd_fs_cal.c" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
     <File name="FreeRTOS/src/queue.c" path="../libs/FreeRTOS/src/queue.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
-    <File name="STM32_USB-FS-Device_Driver/inc/otgd_fs_regs.h" path="STM32_USB-FS-Device_Driver/inc/otgd_fs_regs.h" type="1"/>
     <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="STM32_USB-FS-Device_Driver/inc/otgd_fs_regs.h" path="STM32_USB-FS-Device_Driver/inc/otgd_fs_regs.h" type="1"/>
+    <File name="USB/usb_interface.h" path="USB/usb_interface.h" type="1"/>
+    <File name="USB/usb_hal.c" path="USB/usb_hal.c" type="1"/>
     <File name="cmsis_boot/startup/startup_stm32f10x_hd.c" path="cmsis_boot/startup/startup_stm32f10x_hd.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_iwdg.c" path="stm_lib/src/stm32f10x_iwdg.c" type="1"/>
     <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
@@ -189,12 +191,15 @@
     <File name="FreeRTOS/src/list.c" path="../libs/FreeRTOS/src/list.c" type="1"/>
     <File name="inputReader.h" path="inputReader.h" type="1"/>
     <File name="FreeRTOS/src" path="" type="2"/>
+    <File name="device_state_machine.c" path="device_state_machine.c" type="1"/>
     <File name="STM32_USB-FS-Device_Driver/inc/usb_core.h" path="STM32_USB-FS-Device_Driver/inc/usb_core.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_rtc.h" path="stm_lib/inc/stm32f10x_rtc.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_pwr.c" path="stm_lib/src/stm32f10x_pwr.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
+    <File name="USB/usb_hal.h" path="USB/usb_hal.h" type="1"/>
     <File name="utils/pin_control.h" path="../libs/utils/pin_control.h" type="1"/>
+    <File name="USB/usb_interface.c" path="USB/usb_interface.c" type="1"/>
     <File name="FreeRTOS/src/tasks.c" path="../libs/FreeRTOS/src/tasks.c" type="1"/>
     <File name="FreeRTOS/include/task.h" path="../libs/FreeRTOS/include/task.h" type="1"/>
     <File name="USB/usb_pwr.c" path="USB/usb_pwr.c" type="1"/>
@@ -208,11 +213,12 @@
     <File name="FreeRTOS/include/portable.h" path="../libs/FreeRTOS/include/portable.h" type="1"/>
     <File name="FreeRTOS/include" path="" type="2"/>
     <File name="FreeRTOS/include/timers.h" path="../libs/FreeRTOS/include/timers.h" type="1"/>
+    <File name="utils/ring_buffer.h" path="../libs/utils/ring_buffer.h" type="1"/>
     <File name="stm_lib/inc/stm32f10x_sdio.h" path="stm_lib/inc/stm32f10x_sdio.h" type="1"/>
     <File name="FreeRTOS/src/croutine.c" path="../libs/FreeRTOS/src/croutine.c" type="1"/>
     <File name="motor_control.c" path="motor_control.c" type="1"/>
-    <File name="STM32_USB-FS-Device_Driver/src/usb_mem.c" path="STM32_USB-FS-Device_Driver/src/usb_mem.c" type="1"/>
     <File name="STM32_USB-FS-Device_Driver" path="" type="2"/>
+    <File name="STM32_USB-FS-Device_Driver/src/usb_mem.c" path="STM32_USB-FS-Device_Driver/src/usb_mem.c" type="1"/>
     <File name="USB/usb_pwr.h" path="USB/usb_pwr.h" type="1"/>
     <File name="FreeRTOS/include/FreeRTOS.h" path="../libs/FreeRTOS/include/FreeRTOS.h" type="1"/>
     <File name="stm_lib/src/stm32f10x_flash.c" path="stm_lib/src/stm32f10x_flash.c" type="1"/>
@@ -223,10 +229,11 @@
     <File name="stm_lib/inc/stm32f10x_i2c.h" path="stm_lib/inc/stm32f10x_i2c.h" type="1"/>
     <File name="syscalls" path="" type="2"/>
     <File name="STM32_USB-FS-Device_Driver/src/usb_regs.c" path="STM32_USB-FS-Device_Driver/src/usb_regs.c" type="1"/>
+    <File name="utils/ring_buffer.c" path="../libs/utils/ring_buffer.c" type="1"/>
     <File name="inputReader.c" path="inputReader.c" type="1"/>
-    <File name="stm_lib/src/stm32f10x_can.c" path="stm_lib/src/stm32f10x_can.c" type="1"/>
-    <File name="stm_lib/inc" path="" type="2"/>
     <File name="FreeRTOS" path="" type="2"/>
+    <File name="stm_lib/inc" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_can.c" path="stm_lib/src/stm32f10x_can.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_crc.h" path="stm_lib/inc/stm32f10x_crc.h" type="1"/>
     <File name="FreeRTOS/src/timers.c" path="../libs/FreeRTOS/src/timers.c" type="1"/>
     <File name="stm_lib/inc/stm32f10x_wwdg.h" path="stm_lib/inc/stm32f10x_wwdg.h" type="1"/>

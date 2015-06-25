@@ -17,21 +17,13 @@
 #include "usb_lib.h"
 #include "usb_desc.h"
 #include "usb_mem.h"
-#include "hw_config.h"
+#include "usb_interface.h"
 #include "usb_istr.h"
 #include "usb_pwr.h"
 
-/* Private typedef -----------------------------------------------------------*/
-/* Private define ------------------------------------------------------------*/
-
-/* Interval between sending IN packets in frame number (1 frame = 1ms) */
 #define VCOMPORT_IN_FRAME_INTERVAL             5
 
-/* Private macro -------------------------------------------------------------*/
-/* Private variables ---------------------------------------------------------*/
 uint8_t USB_Rx_Buffer[VIRTUAL_COM_PORT_DATA_SIZE];
-/* Private function prototypes -----------------------------------------------*/
-/* Private functions ---------------------------------------------------------*/
 
 /*******************************************************************************
 * Function Name  : EP1_IN_Callback
@@ -61,13 +53,12 @@ void EP3_OUT_Callback(void)
   USB_Rx_Cnt = USB_SIL_Read(EP3_OUT, USB_Rx_Buffer);
 
   for (i=0; i<USB_Rx_Cnt; i++) {
-	  USB_SetLeds(USB_Rx_Buffer[i]);
+	  //USB_SetLeds(USB_Rx_Buffer[i]);
   }
   
   /* Enable the receive of data on EP3 */
   SetEPRxValid(ENDP3);
 }
-
 
 /*******************************************************************************
 * Function Name  : SOF_Callback / INTR_SOFINTR_Callback
