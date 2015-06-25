@@ -13,9 +13,13 @@ uint32_t usbTxPrtIn = 0;
 uint32_t usbTxPtrOut = 0;
 uint32_t usbTxLength  = 0;
 
+void UsbInterface_Init()
+{
+	RingBuffer_Init(&rxBuffer, sizeof(uint8_t), 64);
+}
+
 void Handle_USBAsynchXfer (void)
 {
-  
 	uint16_t USB_Tx_ptr;
 	uint16_t USB_Tx_length;
 
@@ -58,12 +62,20 @@ void Handle_USBAsynchXfer (void)
 
 void USB_Send_Data(uint8_t data)
 {
-  
-  usbTxBuffer[usbTxPrtIn] = data;
-  usbTxPrtIn++;
+	usbTxBuffer[usbTxPrtIn] = data;
+	usbTxPrtIn++;
 
-  if(usbTxPrtIn >= USART_RX_DATA_SIZE)
-  {
-    usbTxPrtIn = 0;
-  }
+	if (usbTxPrtIn >= USART_RX_DATA_SIZE) {
+		usbTxPrtIn = 0;
+	}
+}
+
+bool USB_ReceiveData(uint8_t *data)
+{
+	return RingBuffer_Pop(&rxBuffer, data);
+}
+
+void USB_PutReceivedData(uint8_t data)
+{
+	RingBuffer_Push(&rxBuffer, &data);
 }

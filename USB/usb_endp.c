@@ -54,6 +54,7 @@ void EP3_OUT_Callback(void)
 
   for (i=0; i<USB_Rx_Cnt; i++) {
 	  //USB_SetLeds(USB_Rx_Buffer[i]);
+	  USB_PutReceivedData(USB_Rx_Buffer[i]);
   }
   
   /* Enable the receive of data on EP3 */
