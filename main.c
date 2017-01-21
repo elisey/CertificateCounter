@@ -22,45 +22,6 @@ void USB_LP_CAN1_RX0_IRQHandler(void)
 	USB_Istr();
 }
 
-void leds(void *param)
-{
-/*	while(1)
-	{
-		MotorControl_Start(motorDirection_backward);
-		vTaskDelay(50);
-
-		MotorControl_ForceStop();
-		vTaskDelay(50);
-		MotorControl_Stop();
-
-
-		MotorControl_Start(motorDirection_forward);
-
-		if (waitForCatch(500, false) == true)	{
-
-
-
-			MotorControl_Start(motorDirection_forward);
-
-			if (waitForCatch(2000, true) == true)	{
-
-				MotorControl_Stop();
-
-				vTaskDelay(400);
-
-
-
-
-
-
-			}
-
-		}
-
-		MotorControl_Stop();
-	}*/
-}
-
 int main(void)
 {
 	InputReader_Init();
@@ -71,14 +32,6 @@ int main(void)
 	Set_USBClock();
 	USB_Interrupts_Config();
 	USB_Init();
-
-/*	xTaskCreate(
-			leds,
-			"leds",
-			configMINIMAL_STACK_SIZE,
-			NULL,
-			tskIDLE_PRIORITY + 1,
-			NULL);*/
 
 	vTaskStartScheduler();
 }
